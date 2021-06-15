@@ -1,0 +1,46 @@
+
+
+###
+GET http://localhost:3000/service/usuario HTTP/1.1
+
+
+###
+GET http://localhost:3000/service/usuario/2 HTTP/1.1
+
+
+###
+POST http://localhost:3000/service/usuario/login HTTP/1.1
+Content-Type: application/json
+
+{
+    "usuario_user" : "admin",
+    "usuario_pass" : "admin"
+}
+
+
+###
+DELETE http://localhost:3000/service/usuario/2 HTTP/1.1
+
+
+###
+POST http://localhost:3000/service/usuario HTTP/1.1
+Content-Type: application/json
+
+{
+    "usuario_nombre" : "Harold Anderson",
+    "usuario_user" : "snakepatch53",
+    "usuario_pass" : "#Harold-12",
+    "privilegio_id" : "1"
+}
+
+
+###
+PUT http://localhost:3000/service/usuario/2 HTTP/1.1
+Content-Type: application/json
+
+{
+    "usuario_nombre" : "Harold Anderson Z",
+    "usuario_user" : "snakepatch53Z",
+    "usuario_pass" : "#Harold-12Z",
+    "privilegio_id" : "1"
+}

@@ -1,0 +1,82 @@
+page section.head h3 {
+  font-size: 18px;
+  color: var(--tertiary_color);
+}
+
+page section.head button {
+  background: #00A65A;
+  color: #ffffff;
+}
+
+page section.head .ideabutton.delete {}
+
+page section.head .report {
+  background: #4f7d8b;
+}
+
+page section.head .search {
+  flex-grow: 1;
+  max-width: 500px;
+  color: var(--tertiary_color);
+}
+
+page section.ideasection form.ideaform .body {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+page section.ideasection form.ideaform .body .campo input:disabled {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+
+/*BUtton table*/
+.ideatable table tr th:last-child,
+.ideatable table tr td:last-child {
+  width: 145px;
+}
+
+.ideabutton {
+  justify-content: center !important;
+}
+
+.ideabutton span {
+  margin: 0 0 0 5px;
+}
+
+.ideabutton.edit,
+.ideabutton.delete {
+  margin: auto;
+  width: 70px;
+  color: #ffffff;
+}
+
+.ideabutton.delete {
+  background: #037BFD !important;
+  width: 80px;
+}
+
+
+.ideabutton.edit {
+  background: #00A65A;
+}
+
+
+
+
+@media (max-width: 1450px) {
+  page section.ideasection form.ideaform .body {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 1150px) {
+  page section.ideasection form.ideaform .body {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 850px) {
+  page section.ideasection form.ideaform .body {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

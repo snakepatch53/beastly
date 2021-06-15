@@ -1,0 +1,290 @@
+/*HEADER*/
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    background: var(--primary_background);
+    box-shadow: 0 3px 6px 2px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+header span {
+    display: block;
+    width: 200px;
+    height: 100%;
+    padding: 0 10px;
+    font-size: 16px;
+    text-align: center;
+    letter-spacing: 0.7px;
+    text-shadow: 0 0 1px var(--primary_color);
+    color: var(--primary_color);
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    line-height: 3.1;
+    background: rgba(0, 0, 0, 0.2);
+    border-right: solid 1px rgba(0, 0, 0, 0.2);
+}
+
+header button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 100%;
+    background: transparent;
+    cursor: pointer;
+}
+
+header button:hover {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+header button i {
+    color: var(--primary_color);
+}
+
+header button img {
+    width: 15px;
+    height: 12px;
+    filter: invert(1);
+}
+
+header button.session_button {
+    width: auto;
+    padding: 0 10px;
+    margin: 0 0 0 auto;
+    white-space: nowrap;
+    color: var(--primary_color);
+    font-size: 15px;
+    letter-spacing: 0.5px;
+}
+
+header button.session_button:hover {
+    text-decoration: underline;
+    background: transparent;
+}
+
+/*header -> in close*/
+
+.state.close ~ header span {
+    width: 50px;
+}
+
+
+
+
+
+
+/*CONTENT*/
+
+content {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    padding: 50px 0 0 0;
+}
+
+/*tool*/
+
+content tool {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 200px;
+    min-width: 200px;
+    height: 100%;
+    padding: 10px;
+    border-right: solid 1px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 3px 6px 1px rgba(0, 0, 0, 0.3);
+    background: var(--secondary_background);
+    overflow-y: auto;
+}
+
+content tool img.user_img {
+    display: block;
+    width: 120px;
+    height: 120px;
+    margin: 10px 0;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+}
+
+content tool span.user_name {
+    display: block;
+    width: 100%;
+    min-height: 30px;
+    text-align: center;
+    color: var(--secondary_color);
+    font-size: 17px;
+    margin: 0 0 10px 0;
+    padding: 0 0 10px 0;
+    letter-spacing: 0.2px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+content tool hr {
+    background: rgba(0, 0, 0, 0.2);
+    width: 100%;
+    height: 1px;
+    display: none;
+}
+
+content tool a.option {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 30px;
+    min-height: 30px;
+    margin: 5px 0;
+    padding: 0 5px;
+    text-decoration: none;
+    color: var(--secondary_color);
+    /*  border-radius: 2px;*/
+}
+
+content tool a.option:hover {
+/*    background: rgba(0, 0, 0, 0.1);*/
+}
+
+content tool a.option:before {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    margin: auto;
+    background: var(--secondary_color);
+    border-radius: 5px;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+content tool a.option:hover:before {
+    width: 100%;
+    opacity: 1;
+    transition: all 0.3s ease;
+}
+
+content tool a.option i {
+    font-size: 12px;
+}
+
+content tool a.option img {
+    width: 15px;
+    height: 15px;
+    filter: invert(1);
+}
+
+content tool a.option span {
+    flex-grow: 1;
+    display: block;
+    padding: 0 0 0 5px;
+    font-size: 16px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    opacity: 1;
+}
+
+content tool a.option.active {}
+
+content tool a.option.active {
+    color: var(--primary_background);
+}
+
+/*tool -> in close*/
+.state.close ~ content tool {
+    width: 50px;
+    min-width: 50px;
+}
+
+.state.close ~ content tool img.user_img {
+    width: 40px;
+    height: 40px;
+}
+
+.state.close ~ content tool a.option span {
+    width: 0;
+    padding: 0;
+    opacity: 0;
+}
+
+.state.close ~ content tool a.option.active {
+    padding: 0 5px;
+}
+
+
+
+/*PAGE*/
+
+content page {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background: var(--tertiary_background);
+    overflow: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* in movil */
+
+@media (max-width: 600px) {
+    content tool {
+        position: fixed;
+        z-index: 500;
+        top: 0;
+        left: 0;
+        padding: 50px 0 0 0;
+        opacity: 1;
+        overflow-x: inherit;
+    }
+
+    .state.close ~ header span {
+        width: 0;
+        padding: 0;
+    }
+
+    .state.close ~ content tool {
+        width: 0px;
+        min-width: 0px;
+        padding: 0;
+        overflow: hidden;
+        opacity: 0;
+    }
+
+    .state.close ~ content tool img.user_img {
+        width: 0px;
+        height: 0px;
+    }
+
+    .state.close ~ content tool a.option span {
+        width: 0;
+        padding: 0;
+    }
+}

@@ -1,0 +1,66 @@
+@font-face {
+    src: url('../general.font/SourceSansPro-Regular.ttf');
+    font-family: SourceSansPro-Regular;
+}
+
+:root {
+    --primary_background: #1976D2;
+    --primary_background_hover: #1669bb;
+    --primary_color: #ffffff;
+    --primary_color_hover: #f0f0f0;
+    --secondary_background: #292D3E;
+    --secondary_background_hover: #242736;
+    --secondary_color: #ffffff;
+    --secondary_color_hover: #f0f0f0;
+    --tertiary_background: #FFFFFF;
+    --tertiary_background_hover: #d5d5d5;
+    --tertiary_color: #1b1b1b;
+    --tertiary_color_hover: #000000;
+    --success: #19A15F;
+    --info: #427ad5;
+    --warnning: #FFCD42;
+    --error: #DD5145;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    transition: all 0.3s ease;
+    font-family: sans-serif;
+    user-select: none;
+    outline: none;
+    border-style: none;
+    font-family: SourceSansPro-Regular;
+}
+
+body {
+    overflow-y: hidden;
+}
+
+img {
+    pointer-events: none;
+}
+
+
+
+
+/* _____________ SCROLL _ STYLES ________________ */
+*::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+
+*::-webkit-scrollbar-thumb {
+    background: var(--secondary_background);
+    border-radius: 7px;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+    background: var(--secondary_background_hover);
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+*::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0);
+}

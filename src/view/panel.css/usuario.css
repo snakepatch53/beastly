@@ -1,0 +1,45 @@
+page section.head h3 {
+  font-size: 18px;
+  color: var(--tertiary_color);
+}
+
+page section.head button {
+  background: #00A65A;
+  color: #ffffff;
+}
+
+page section.head .ideabutton.delete {}
+
+page section.head .report {
+  background: #4f7d8b;
+}
+
+page section.head .search {
+  flex-grow: 1;
+  max-width: 500px;
+  color: var(--tertiary_color);
+}
+
+
+
+/*BUtton table*/
+.ideatable table tr th:last-child,
+.ideatable table tr td:last-child {
+  width: 145px;
+}
+
+.ideabutton.edit,
+.ideabutton.delete {
+  margin: auto;
+  width: 70px;
+  color: #ffffff;
+}
+
+.ideabutton.delete {
+  background: #DC3144;
+}
+
+
+.ideabutton.edit {
+  background: #037BFD;
+}

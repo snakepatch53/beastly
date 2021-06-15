@@ -1,0 +1,825 @@
+page {
+    --margin: 30px 40px 0 40px;
+    --padding: 10px;
+    --height: auto;
+    --opacity: 1;
+    --overflow: visible;
+}
+
+/*section*/
+.ideasection {
+    /*
+  margin: var(--margin);
+  padding: var(--padding);
+  height: var(--height);
+  opacity: var(--opacity);
+  overflow: var(--overflow);
+*/
+
+    margin: 0;
+    padding: 0;
+    height: 0;
+    overflow: hidden;
+    opacity: 0;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.1);
+    background: transparent;
+    border: solid 1px var(--primary_background);
+}
+
+
+/*head*/
+.ideasection.open {
+    margin: var(--margin);
+    padding: var(--padding);
+    height: var(--height);
+    opacity: var(--opacity);
+    overflow: var(--overflow);
+}
+
+.ideasection.head {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+}
+
+.ideasection.head h3.tittle i {
+    font-size: 15px;
+}
+
+.ideasection.head h3.tittle {
+    color: var(--primary_background);
+    font-size: 18px;
+    text-shadow:
+        1px 1px 0 #fff,
+        -1px -1px 0 #fff;
+}
+
+
+
+
+/* Button */
+.ideabutton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 85px;
+    height: 30px;
+    padding: 5px;
+    /*    border-radius: 3px;*/
+    cursor: pointer;
+    position: relative;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.3);
+}
+
+.ideabutton:before {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    content: '';
+    display: block;
+    margin: auto;
+    width: 0%;
+    height: 2px;
+    z-index: 1;
+    /*    border-radius: 0 0 3px 3px;*/
+    background: var(--primary_color);
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.ideabutton:hover:before {
+    width: 100%;
+    opacity: 1;
+}
+
+.ideabutton img {
+    width: 13px;
+    filter: invert(1);
+}
+
+.ideabutton i {
+    font-size: 12px;
+    margin-right: 2px;
+}
+
+.ideabutton span {
+    /*  color: #ffffff;*/
+    font-size: 14px;
+    letter-spacing: 0.5px;
+}
+
+.buttons-flex {
+    display: flex;
+}
+
+
+/* Report */
+
+.ideareport {
+    display: block;
+    width: 85px;
+    height: 30px;
+    padding: 0 5px;
+    cursor: pointer;
+    position: relative;
+    /*    border-radius: 2px;*/
+}
+
+.ideareport:before {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    content: '';
+    width: 0%;
+    height: 4px;
+    z-index: 1;
+    border-radius: 0 0 3px 3px;
+    background: var(--primary_background);
+    transition: all 0.3s ease;
+}
+
+.ideareport:hover:before {
+    width: 100%;
+}
+
+.ideareport select {    
+    background: transparent;
+    height: 100%;
+    font-size: 15px;
+    color: #ffffff;
+    width: 100%;
+}
+
+.ideareport select * {
+    color: #000;
+}
+
+
+/* Separador */
+
+hr.d {
+    display: block;
+    margin: 0 10px;
+    width: 2px;
+    height: 100%;
+    background: var(--primary_background);
+}
+
+
+/* Search */
+
+.ideasearch {
+    display: flex;
+    height: 30px;
+    justify-content: center;
+    align-items: center;
+    /*    --radius: 3px;*/
+    --radius: 0;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.3);
+}
+
+.ideasearch span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 0 10px;
+    border-radius: var(--radius) 0 0 var(--radius);
+    background: #457da6;
+    color: #fff;
+    font-size: 16px;
+    position: relative;
+}
+
+.ideasearch .content {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 0 5px;
+    border-radius: 0 var(--radius) var(--radius) 0;
+    background: #ffffff;
+    border: solid 1px #457da6;
+}
+
+.ideasearch .content i {
+    color: #457da6;
+}
+
+.ideasearch .content img {
+    --tamano: 15px;
+    width: var(--tamano);
+    min-width: var(--tamano);
+    height: var(--tamano);
+    min-height: var(--tamano);
+    max-height: 100%;
+    /*  background: #000;*/
+}
+
+.ideasearch .content input {
+    flex-grow: 1;
+    height: 100%;
+    background: transparent;
+    padding: 0 0 0 5px;
+    font-size: 15px;
+}
+
+.ideasearch .content input::placeholder {
+    color: #457da6;
+}
+
+.ideasearch span:before {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    content: '';
+    display: block;
+    margin: auto;
+    width: 0%;
+    height: 2px;
+    z-index: 1;
+    /*    border-radius: 0 0 3px 3px;*/
+    background: var(--primary_color);
+    transition: all 0.3s ease;
+    opacity: 0;
+}
+
+.ideasearch:hover span:before {
+    width: 100%;
+    opacity: 1;
+}
+
+
+
+/*table*/
+.ideatable {
+    width: 100%;
+    height: auto;
+    max-height: calc(100vh - 300px);
+    overflow: auto;
+}
+
+.ideatable table {
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+.ideatable table thead tr th {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background: #ffffff;
+    color: #000000;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2);
+    --radius: 4px;
+}
+
+.ideatable table thead tr th:first-child {
+    /*    border-radius: var(--radius) 0 0 var(--radius);*/
+}
+
+.ideatable table thead tr th:last-child {
+    /*    border-radius: 0 var(--radius) var(--radius) 0;*/
+}
+
+.ideatable table tr {
+    height: 50px;
+}
+
+.ideatable table tbody tr:nth-child(2n) {
+    background: rgba(0, 0, 0, 0.03);
+}
+
+.ideatable table tbody tr:hover {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.ideatable table tbody tr:hover span.td-span {
+    color: var(--info);
+}
+
+.ideatable table tbody tr span.td-span {
+    font-size: 16px;
+}
+
+.ideatable table tbody tr span.td-span i {
+    font-size: 14px;
+    transition: unset;
+}
+
+.ideatable table tbody tr:hover span.td-span i {
+    transition: unset;
+}
+
+.ideatable table tbody tr img.td-photo {
+    width: 40px;
+    height: 40px;
+    max-height: 40px;
+    object-fit: contain;
+    object-position: center;
+    /*    border-radius: 3px;*/
+}
+
+.ideatable table tbody tr img.td-photo.photo-product {
+    object-fit: contain;
+}
+
+.ideatable table tbody tr td {
+    color: var(--tertiary_color);
+}
+
+.ideatable table tbody tr td .ideabutton.disabled {
+    position: relative;
+    background: #7a7a7a !important;
+    cursor: no-drop;
+}
+
+.ideatable table tbody tr td.td-action .ideabutton {
+    width: auto;
+}
+
+.ideatable table tbody tr td.td-action .ideabutton:first-child {
+    margin-right: 3px;
+}
+
+.ideatable table tbody tr td .ideabutton.disabled:hover:before {
+    width: 0;
+}
+
+
+
+
+/*form*/
+
+.ideaform {
+    /*  background: #000;*/
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+}
+
+.ideaform .head {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 30px;
+    border-bottom: solid 1px rgba(0, 0, 0, 0.2);
+}
+
+.ideaform .head h3 {
+    font-size: 17px;
+}
+
+.ideaform .head input {
+    width: auto;
+    margin: 0 0 0 5px;
+    background: transparent;
+    color: var(--info);
+    font-size: 16px;
+}
+
+.ideaform .body {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+    padding: 20px 20px;
+}
+
+.ideaform .body .campo {
+    display: flex;
+    flex-direction: column;
+}
+
+.ideaform .body .campo span {
+    font-size: 15px;
+    font-weight: bold;
+    color: var(--tertiary_color);
+    margin: 0 0 5px 0;
+}
+
+.ideaform .body .campo span i {
+    font-size: 13px;
+}
+
+.ideaform .body .campo span b {
+    color: red;
+}
+
+.ideaform .body .campo input,
+.ideaform .body .campo select {
+    width: 100%;
+    height: 35px;
+    padding: 5px 10px;
+    /*    border-radius: 2px;*/
+    border: solid 1px rgba(0, 0, 0, 0.2);
+    font-size: 16px;
+    background: #ffffff;
+}
+
+.ideaform .body .campo .radios {
+    display: flex;
+    background: #ffffff;
+    width: 100%;
+    height: 35px;
+    border: solid 1px rgba(0, 0, 0, 0.2);
+    /*    border-radius: 2px;*/
+}
+
+.ideaform .body .campo .radios label {
+    flex-grow: 1;
+    position: relative;
+    height: 100%;
+}
+
+.ideaform .body .campo .radios span {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin: 0;
+    font-size: 16px;
+    font-weight: normal;
+    cursor: pointer;
+    color: var(--tertiary_color);
+}
+
+.ideaform .body .campo .radios label span:before {
+    position: absolute;
+    bottom: 0;
+    content: '';
+    display: block;
+    width: 0%;
+    height: 2px;
+    background: rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.ideaform .body .campo .radios label span:hover:before {
+    width: 100%;
+}
+
+.ideaform .body .campo .radios label input:checked ~ span:before {
+    width: 100%;
+    background: var(--info);
+}
+
+.ideaform .body .campo .radios input {
+    display: none;
+}
+
+.ideaform .body .campo .inputfile {
+    position: relative;
+    width: 100%;
+    height: 35px;
+    --width_placeholder: 168px;
+}
+
+.ideaform .body .campo .inputfile i,
+.ideaform .body .campo .inputfile input[type="file"]:before,
+.ideaform .body .campo .inputfile img {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    content: '       Seleccionar archivo';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ideaform .body .campo .inputfile input[type="file"]:before {
+    width: var(--width_placeholder);
+    height: 35px;
+    background: #0076ff;
+    color: #ffffff;
+    font-size: 15px;
+}
+
+.ideaform .body .campo .inputfile input[type="file"].placeholder_on:before {
+    width: 100%;
+    content: attr(placeholder);
+}
+
+.ideaform .body .campo .inputfile img {
+    width: 25px;
+    height: 25px;
+    left: 5px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    filter: invert(1);
+}
+
+.ideaform .body .campo .inputfile i {
+    top: 0;
+    margin: auto;
+    left: 5px;
+    font-size: 20px;
+    color: #ffffff;
+}
+
+.ideaform .body .campo .inputfile input[type="file"]:after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    content: '';
+    width: 0%;
+    height: 3px;
+    z-index: 1;
+    /*    border-radius: 0 0 3px 3px;*/
+    background: var(--primary_color);
+    transition: all 0.3s ease;
+    border-bottom: solid 1px rgba(0, 0, 0, 0.1);
+}
+
+.ideaform .body .campo .inputfile input[type="file"]:hover:after {
+    width: var(--width_placeholder);
+}
+
+.ideaform .body .campo .inputpass {
+    position: relative;
+}
+
+.ideaform .body .campo button.showpass {
+    background: #054d72;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 35px;
+    height: 35px;
+    /*    border-radius: 1px;*/
+}
+
+.ideaform .body .campo button.showpass i {
+    color: #ffffff;
+    font-size: 17px;
+}
+
+.ideaform .body .campo button.showpass img {
+    width: 25px;
+    height: 25px;
+}
+
+.ideaform .foot {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 20px;
+}
+
+.ideaform .foot .msg {
+    width: 100%;
+    height: auto;
+    min-height: 21px;
+    text-align: center;
+    margin: 0 0 20px 0;
+    color: var(--error);
+    font-size: 18px;
+    text-shadow: 1px 1px 1px #fff;
+}
+
+.ideaform .foot .buttons {
+    display: flex;
+}
+
+.ideaform .foot .ideabutton {
+    color: #ffffff;
+    margin: 0 10px 0 0;
+    width: 100px;
+    height: 35px;
+}
+
+.ideaform .foot .ideabutton i {
+    margin-right: 3px;
+    font-size: 14px;
+}
+
+.ideaform .foot .ideabutton span {
+    font-size: 15px;
+}
+
+.ideaform .foot .ideabutton.save {
+    background: #037BFD;
+}
+
+.ideaform .foot .ideabutton.cancel {
+    background: #DC3144;
+}
+
+
+
+/*modalconfirm*/
+
+.ideamodal {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: auto;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 2000;
+    overflow: hidden;
+    height: 0;
+    opacity: 0;
+
+}
+
+.ideamodal.open {
+    height: 100%;
+    opacity: 1;
+    transition: all 0.1s ease !important;
+}
+
+.ideaconfirm {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    max-width: 500px;
+    height: auto;
+    max-height: 150px;
+    background: #ffffff;
+    /*    border-radius: 3px;*/
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.3);
+    transition: all 0.1s ease !important;
+}
+
+.ideamodal .modal-progress {
+    --margin: 10px;
+    /* Is for content -> span and progressbar */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    max-width: 350px;
+    max-height: 95px;
+    background: #fff;
+    /*    border-radius: 3px;*/
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.3);
+}
+
+.ideamodal .modal-progress span {
+    display: block;
+    text-align: left;
+    width: 100%;
+    height: 50px;
+    padding: 15px var(--margin) 0 var(--margin);
+    border-bottom: solid 1px rgba(0, 0, 0, 0.1);
+    font-size: 17px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    color: #000000;
+    text-shadow: 0.2px 0.2px #000;
+}
+
+.ideamodal .modal-progress .progress_bar {
+    width: calc(100% - (var(--margin)) * 2);
+    height: 100%;
+    max-height: 20px;
+    margin: 0 var(--margin) 15px var(--margin);
+    /*  border: 2px solid var(--primary_background);*/
+    /*    border-radius: 5px;*/
+    background: repeating-linear-gradient(45deg,
+            var(--primary_background) 0px,
+            var(--primary_background) 20px,
+            var(--primary_background_hover) 20px,
+            var(--primary_background_hover) 40px) 0 / 200%;
+    animation: progress 5s linear infinite;
+}
+
+@keyframes progress {
+    to {
+        background-position: 100% 0;
+    }
+}
+
+.ideaconfirm .head {
+    padding: 10px 30px;
+    display: flex;
+    position: relative;
+    border-bottom: solid 1px rgba(0, 0, 0, 0.2);
+    background: var(--secondary_background);
+    color: var(--secondary_color);
+    /*    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.3);*/
+}
+
+.ideaconfirm .head i {
+    color: var(--secondary_color);
+    font-size: 16px;
+}
+
+.ideaconfirm .head p.msg {
+    font-size: 17px;
+    letter-spacing: 0.5px;
+}
+
+.ideaconfirm .head button {
+    position: absolute;
+    right: 3px;
+    top: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    padding: 4px;
+    background: transparent;
+}
+
+.ideaconfirm .head button img {
+    width: 100%;
+    height: 100%;
+    filter: opacity(0.4);
+}
+
+.ideaconfirm .head button:hover img {
+    filter: opacity(1);
+}
+
+.ideaconfirm .foot {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px 30px 10px 0;
+}
+
+.ideaconfirm .foot .buttons {}
+
+.ideaconfirm .foot button {
+    margin: 0 0 0 5px;
+    justify-content: center;
+}
+
+.ideaconfirm .foot button span {
+    margin: 0 0 0 3px;
+}
+
+.ideaconfirm .foot button.ideabutton.delete {
+    background: #DC3144;
+    width: 80px;
+}
+
+.ideaconfirm .foot button.ideabutton.cancel {
+    background: var(--primary_background);
+    color: var(--primary_color);
+}
+
+.ideaconfirm .foot button.ideabutton.cancel img {
+    filter: invert(0);
+    width: 17px;
+}
+
+
+
+
+/* movil */
+
+@media (max-width: 900px) {
+    .ideasection {
+        --margin: 20px 10px 0 10px;
+    }
+
+    .ideasection.head {
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 5px;
+    }
+
+    .ideareport {
+        width: 100%;
+    }
+
+    .ideasearch {
+        width: 100%;
+        max-width: unset !important;
+    }
+
+    .ideabutton {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .ideabutton img {
+        margin: 0 5px 0 0;
+    }
+
+    .ideaform .body {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media (max-width: 650px) {
+    .ideasection {
+        --margin: 10px 5px 0 5px;
+    }
+}

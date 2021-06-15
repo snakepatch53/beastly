@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+html(lang="es")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible" content="IE=edge")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        link(rel="icon", href=root_absolute + "view/general.img/icon.png")
+        link(rel="stylesheet" href=root_absolute + "view/general.css/fontawesome/css/all.min.css")
+        link(rel="stylesheet" href=root_absolute + "view/general.css/config.css")
+        link(rel="stylesheet" href=root_absolute + "view/panel.css/login.css")
+        title Login - #{ proyect.name }
+
+    body
+        form(action="#" onsubmit="return false" id="element_form")
+            div.container
+                img.logo(src=root_absolute + "view/general.img/icon.png" alt="Logo")
+                span Login - #{ proyect.name }
+                div.input
+                    i.fas.fa-user
+                    input(placeholder="usuario" type="text" name="usuario_user")
+                div.input
+                    i.fas.fa-unlock-alt
+                    input(placeholder="Contraseña" type="password" name="usuario_pass")
+                label(for="save_pass" class="input")
+                    input(type="checkbox" id="save_pass" name="save_pass")
+                    span Recordar contraseña
+                div.input.msg
+                    span.msg(id="element_msg")
+                div(class="input submit")
+                    input(type="submit" value="Iniciar sesion")
+
+        section(class="ideamodal _open" id="sectionProgress")
+            div(class="modal-progress")
+                span(id="sectionProgressText") Procesando..
+                div.progress_bar
+
+    foot
+        //- script(type='text/javascript').
+        //-     $proyect = "";
+        script(src=root_absolute + "control/general.js/function.js")
+        script(src=root_absolute + "control/general.js/fetch.js")
+        script(src=root_absolute + "control/panel.js/login.js")

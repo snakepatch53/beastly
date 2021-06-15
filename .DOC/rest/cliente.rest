@@ -1,0 +1,64 @@
+
+
+###
+GET http://localhost:3000/service/cliente HTTP/1.1
+
+
+###
+GET http://localhost:3000/service/cliente/1 HTTP/1.1
+
+
+###
+DELETE http://localhost:3000/service/cliente/18 HTTP/1.1
+
+
+###
+POST http://localhost:3000/service/cliente HTTP/1.1
+Content-Type: application/json
+
+{
+    "cliente_nombre1": "test",
+    "cliente_nombre2": "rest",
+    "cliente_apellido1": "hernandez",
+    "cliente_apellido2": "zambrano",
+    "cliente_nacimiento": "65456ds",
+    "cliente_ticket": 1,
+    "cliente_calle1": "dsadsa",
+    "cliente_calle2": "dsadas",
+    "cliente_ciudad": "macas",
+    "cliente_estado": "1",
+    "cliente_postal": "kjdfsh",
+    "cliente_ojos_color": "cafes",
+    "cliente_ojos_problema": "sadas",
+    "cliente_estatura": "1.77",
+    "cliente_cita_lugar": "usa",
+    "cliente_cita_hora": "ocho",
+    "cliente_pass": "sdfsd4fsd5sdfds",
+    "cliente_createat": "2021-05-29"
+}
+
+
+###
+PUT http://localhost:3000/service/cliente/19 HTTP/1.1
+Content-Type: application/json
+
+{
+    "cliente_nombre1": "test12",
+    "cliente_nombre2": "rest12",
+    "cliente_apellido1": "hernandez12",
+    "cliente_apellido2": "zambrano",
+    "cliente_nacimiento": "65456ds",
+    "cliente_ticket": 1,
+    "cliente_calle1": "dsadsa",
+    "cliente_calle2": "dsadas",
+    "cliente_ciudad": "macas",
+    "cliente_estado": "1",
+    "cliente_postal": "kjdfsh",
+    "cliente_ojos_color": "cafes",
+    "cliente_ojos_problema": "sadas",
+    "cliente_estatura": "1.77",
+    "cliente_cita_lugar": "usa",
+    "cliente_cita_hora": "ocho",
+    "cliente_pass": "sdfsd4fsd5sdfds",
+    "cliente_createat": "2021-05-29"
+}

@@ -1,0 +1,8 @@
+{
+    "port": 3000,
+    "name": "beastly",
+    "db_host": "193.145.110.2",
+    "db_user": "root",
+    "db_pass": "while(!vida)",
+    "db_name": "beastly"
+}
